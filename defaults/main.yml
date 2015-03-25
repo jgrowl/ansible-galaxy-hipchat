@@ -1,0 +1,4 @@
+---
+# defaults file for hipchat
+hipchat_apt_key: https://www.hipchat.com/keys/hipchat-linux.key
+

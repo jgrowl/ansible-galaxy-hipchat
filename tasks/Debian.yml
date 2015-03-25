@@ -1,0 +1,3 @@
+- copy: src=atlassian-hipchat.list dest=/etc/apt/sources.list.d
+- apt_key: url={{ hipchat_apt_key }} state=present
+- apt: name=hipchat state=present update_cache=yes
