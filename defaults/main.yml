@@ -1,4 +1,6 @@
 ---
-# defaults file for hipchat
-hipchat_apt_key: https://www.hipchat.com/keys/hipchat-linux.key
 
+# defaults file for hipchat
+
+hipchat_apt_repo: deb http://downloads.hipchat.com/linux/apt stable main
+hipchat_apt_key: https://www.hipchat.com/keys/hipchat-linux.key

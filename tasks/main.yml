@@ -2,3 +2,4 @@
 # tasks file for hipchat
 - include: Debian.yml
   when: ansible_os_family == "Debian"
+  tags: ["hipchat_install_debiab"]

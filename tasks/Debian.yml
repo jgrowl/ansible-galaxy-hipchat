@@ -1,3 +1,20 @@
-- copy: src=atlassian-hipchat.list dest=/etc/apt/sources.list.d
-- apt_key: url={{ hipchat_apt_key }} state=present
-- apt: name=hipchat state=present update_cache=yes
+---
+
+- name: Ensure HipChat repo in sources
+  apt_repository: >
+    repo="{{ hipchat_apt_repo }}"
+    state=present
+  tags: ["hipchat_install_debian_repo"]
+
+- name: Ensure HipChat Key
+  apt_key: >
+    url={{ hipchat_apt_key }}
+    state=present
+  tags: ["hipchat_install_debian_key"]
+
+- name: Ensure HipChat
+  apt: >
+    name=hipchat
+    state=present
+    update_cache=yes
+  tags: ["hipchat_install_debian_install"]
